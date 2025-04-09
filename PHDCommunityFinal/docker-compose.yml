@@ -1,0 +1,23 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - 'ACCEPT_EULA=Y'
+      - 'SA_PASSWORD=Pass@123'
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+
+  phdcommunityfinal:
+    image: your-dotnet-api-image  # Replace with your pre-built API image
+    ports:
+      - "5000:80"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
