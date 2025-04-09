@@ -1,0 +1,313 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\PHDFinalVersion.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PHDFinalVersion.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\Files\\Actober.pdf",
+      "PackagePath": "staticwebassets\\Files\\Actober.pdf"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\Images\\PDFImages.png",
+      "PackagePath": "staticwebassets\\Images\\PDFImages.png"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\Vedio\\Nature.mp4",
+      "PackagePath": "staticwebassets\\Vedio\\Nature.mp4"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\css\\landingpage.css",
+      "PackagePath": "staticwebassets\\css\\landingpage.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\js\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\430bccc1-daf7-44fd-bc9c-bcf35b3e5447.png",
+      "PackagePath": "staticwebassets\\uploads\\430bccc1-daf7-44fd-bc9c-bcf35b3e5447.png"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\519e9739-c132-4fc0-ba7d-81fae2d7a48d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\519e9739-c132-4fc0-ba7d-81fae2d7a48d.jpg"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\59673b10-2a5a-445b-bf09-fcd88c1d0906.png",
+      "PackagePath": "staticwebassets\\uploads\\59673b10-2a5a-445b-bf09-fcd88c1d0906.png"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\6e288f1b-7ca5-4f33-9129-7699404e2c64.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6e288f1b-7ca5-4f33-9129-7699404e2c64.jpg"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\8fc648b5-fe12-42e3-b981-4b973276289d.png",
+      "PackagePath": "staticwebassets\\uploads\\8fc648b5-fe12-42e3-b981-4b973276289d.png"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\e04c3abb-422c-4a9a-adf4-b30dc47de095.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e04c3abb-422c-4a9a-adf4-b30dc47de095.jpg"
+    },
+    {
+      "Id": "D:\\ASP .NET MVC\\PHDFinalVersion\\PHDFinalVersion\\wwwroot\\uploads\\e54c89ff-c195-43cf-915b-3b6319126fa7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e54c89ff-c195-43cf-915b-3b6319126fa7.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PHDFinalVersion.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.PHDFinalVersion.props",
+      "PackagePath": "build\\PHDFinalVersion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.PHDFinalVersion.props",
+      "PackagePath": "buildMultiTargeting\\PHDFinalVersion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.PHDFinalVersion.props",
+      "PackagePath": "buildTransitive\\PHDFinalVersion.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

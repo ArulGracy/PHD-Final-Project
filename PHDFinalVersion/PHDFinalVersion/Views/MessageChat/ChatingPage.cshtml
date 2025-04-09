@@ -1,0 +1,401 @@
+﻿    @model PHDFinalVersion.Models.AllModelData
+
+    @{
+        ViewData["Title"] = "Chat";
+        int UserID = Model.UserStudentProfileData.FirstOrDefault().StudentID;
+    }
+
+    <style>
+        /* General message style */
+        .message {
+            display: flex;
+            justify-content: flex-end; /* Ensures messages are aligned to the right */
+            margin-bottom: 10px; /* Space between messages */
+        }
+
+        #messagesContainer{
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        /* Styling the message bubble */
+        .message-bubble {
+            background-color: #e4e6eb; /* Light grey background like WhatsApp */
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 80%; /* Adjusts the width of the message bubble */
+            word-wrap: break-word; /* Ensures long words break and don't overflow */
+            font-size: 14px;
+            position: relative;
+        }
+
+            /* Add a triangle to create the "bubble" effect */
+            .message-bubble::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #e4e6eb; /* Matches the bubble color */
+            }
+
+            /* If you want to style the sender's name separately */
+            .message-bubble strong {
+                color: #128c7e; /* Dark greenish color (WhatsApp theme) */
+                font-size: 12px; /* Smaller font size for sender name */
+                font-weight: normal;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .message-image {
+            max-width: 100%; /* Ensure image fits within the bubble */
+            border-radius: 10px; /* Rounded corners for image */
+            margin-top: 5px; /* Add some space above the image */
+            }
+
+            /* Styling for video messages */
+            .message-video {
+                max-width: 100%; /* Ensure the video fits within the bubble */
+                border-radius: 10px; /* Optional: rounded corners for the video */
+                margin-top: 5px; /* Add some space above the video */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            /* Styling for PDF document appearance */
+            .message-pdf-icon {
+                width: 40px; /* Size of the PDF icon */
+                height: auto;
+                margin-right: 10px; /* Space between icon and text */
+            }
+    </style>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Chats</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Tabs for switching between Group and Private chats -->
+                        <ul class="nav nav-pills" id="chatTabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="groupTab" data-toggle="pill" href="#groupChat" role="tab" onclick="switchChatType('group')">Group Chats</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="privateTab" data-toggle="pill" href="#privateChat" role="tab" onclick="switchChatType('private')">Private Chats</a>
+                            </li>
+                        </ul>
+
+                        <!-- Chat List -->
+                        <div class="tab-content mt-3" id="chatListContainer">
+                            <div class="tab-pane fade show active" id="groupChat" role="tabpanel">
+                                <div class="list-group" id="groupChatList">
+                                    @foreach (var Grp in Model.GroupData)
+                                    {
+                                        <a href="#" class="list-group-item list-group-item-action" onclick="loadMessages(@Grp.GroupId)">
+                                            @Grp.GroupName
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="privateChat" role="tabpanel">
+                                <div class="list-group" id="privateChatList">
+                                    @foreach (var FriendsData in Model.FriendStudentProfileData)
+                                    {
+                                        <a href="#" class="list-group-item list-group-item-action" onclick="loadMessages(@FriendsData.StudentID,@UserID)">
+                                            @FriendsData.Name
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Messages</h4>
+                    </div>
+                    <div class="card-body">
+                       @* @foreach (var FriendsData in Model.FriendStudentProfileData)
+                        {*@
+                            <div id="messagesContainer">
+                                <p>Select a chat to start messaging.</p>
+                            </div>
+                            <div id="messageInput">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="newMessage" rows="3" placeholder="Type a message..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" class="form-control-file" id="fileInput">
+                                </div>
+                                <button class="btn btn-primary" onclick="sendMessage(@UserID)">Send</button>
+                            </div>
+                        @*}*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+
+        <script >
+
+        
+            // Initialize SignalR connection
+            const connection = new signalR.HubConnectionBuilder()
+                .withUrl("/PHDFinalVersion/chatHub")   // URL of your SignalR hub
+                .build();
+        
+
+            // Start the connection
+            connection.start().then(function () {
+                console.log("Connected to SignalR hub");
+            }).catch(function (err) {
+                console.error("SignalR connection error:", err.toString());
+            });
+
+      
+            // Listen for the 'ReceiveMessage' method from the server
+            connection.on("ReceiveMessage", function (ResponseReceive) {
+                console.log("Message received:", ResponseReceive);
+                // Handle the message (e.g., display it in the chat UI)
+                displayMessage(ResponseReceive);
+            });
+
+            // Function to display received message
+            function displayMessage(message) {
+                const messagesContainer = document.getElementById("messagesContainer");
+
+                let messageHTML = '';
+
+                // Check if it's a text message
+                if (message.MessageType === "T") {
+                    messageHTML = `
+                                <div class="message message-type-t">
+                                    <div class="message-bubble">
+                                        <strong>${message.SenderId}:</strong> ${message.MessageText}
+                                    </div>
+                                </div>`;
+                }
+                // Check if it's a file message (Image, Video, PDF)
+                else if (message.MessageType === "F") {
+                    if (message.FileType === "I") {  // Image
+                        messageHTML = `
+                                <div class="message message-type-t">
+                                    <div class="message-bubble">
+                                        <strong>${message.SenderId}:</strong>
+                                        <img src="${message.FilePath}" class="message-image" alt="image" />
+                                    </div>
+                                </div>`;
+                    } else if (message.FileType === "V") {  // Video
+                        messageHTML = `
+                                <div class="message message-type-t">
+                                    <div class="message-bubble">
+                                        <strong>${message.SenderId}:</strong>
+                                        <video class="message-video" controls>
+                                            <source src="${message.FilePath}" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>`;
+                    } else if (message.FileType === "D") {  // PDF
+                        messageHTML = `
+                                <div class="message message-type-t">
+                                    <div class="message-bubble">
+                                        <strong>${message.SenderId}:</strong>
+                                        <a href="${message.FilePath}" target="_blank">
+                                            <img src="pdf-icon.png" class="message-pdf-icon" alt="PDF document" />
+                                            <strong>Click to view document</strong>
+                                        </a>
+                                    </div>
+                                </div>`;
+                    }
+                }
+
+                messagesContainer.innerHTML += messageHTML;  // Append the message
+            }
+
+            // Function to switch between chat types
+            function switchChatType(chatType) {
+                if (chatType === 'group') {
+                    document.getElementById('groupChat').classList.add('show', 'active');
+                    document.getElementById('privateChat').classList.remove('show', 'active');
+                } else if (chatType === 'private') {
+                    document.getElementById('privateChat').classList.add('show', 'active');
+                    document.getElementById('groupChat').classList.remove('show', 'active');
+                }
+            }
+
+            // Function to load messages (on page load)
+            function loadMessages(chatId, UserID) {
+                localStorage.setItem('ReceiverID', chatId);
+                fetch('/MessageChat/GetIndividualMessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ StudentID: chatId.toString(), UserID: UserID.toString() })
+                })
+                    .then(response => response.json())
+                    .then(response => {
+                        if (response) {
+                            displayMessages(response);
+                        } else {
+                            console.error('No messages found or data error');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            // Function to display the messages on load
+            function displayMessages(MessageData) {
+                const messagesContainer = document.getElementById("messagesContainer");
+                messagesContainer.innerHTML = "";  // Clear previous messages
+                const jsonData = JSON.parse(MessageData);
+                jsonData.forEach(function (m) {
+                    let messageHTML = '';
+
+                    if (m.Flag === "Sender") {
+                        // Sender's message
+                        if (m.MessageType === "T") {
+                            messageHTML = `
+                                <div class="message message-type-t text-right">
+                                    <div class="message-bubble">
+                                        <strong>Sender:</strong> ${m.MessageText}
+                                    </div>
+                                </div>`;
+                        } else if (m.MessageType === "F") {
+                            if (m.FileType === "I") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-right">
+                                        <div class="message-bubble">
+                                            <strong>Sender:</strong>
+                                            <img src="${m.FilePath}" class="message-image" alt="image" />
+                                        </div>
+                                    </div>`;
+                            } else if (m.FileType === "V") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-right">
+                                        <div class="message-bubble">
+                                            <strong>Sender:</strong>
+                                            <video class="message-video" controls>
+                                                <source src="${m.FilePath}" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>`;
+                            } else if (m.FileType === "D") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-right">
+                                        <div class="message-bubble">
+                                            <strong>Sender:</strong>
+                                            <a href="${m.FilePath}" target="_blank">
+                                                <img src="pdf-icon.png" class="message-pdf-icon" alt="PDF document" />
+                                                <strong>Click to view document</strong>
+                                            </a>
+                                        </div>
+                                    </div>`;
+                            }
+                        }
+                    } else if (m.Flag === "Receiver") {
+                        // Receiver's message
+                        if (m.MessageType === "T") {
+                            messageHTML = `
+                                <div class="message message-type-t text-left">
+                                    <div class="message-bubble">
+                                        <strong>Receiver:</strong> ${m.MessageText}
+                                    </div>
+                                </div>`;
+                        } else if (m.MessageType === "F") {
+                            if (m.FileType === "I") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-left">
+                                        <div class="message-bubble">
+                                            <strong>Receiver:</strong>
+                                            <img src="${m.FilePath}" class="message-image" alt="image" />
+                                        </div>
+                                    </div>`;
+                            } else if (m.FileType === "V") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-left">
+                                        <div class="message-bubble">
+                                            <strong>Receiver:</strong>
+                                            <video class="message-video" controls>
+                                                <source src="${m.FilePath}" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>`;
+                            } else if (m.FileType === "D") {
+                                messageHTML = `
+                                    <div class="message message-type-t text-left">
+                                        <div class="message-bubble">
+                                            <strong>Receiver:</strong>
+                                            <a href="${m.FilePath}" target="_blank">
+                                                <img src="pdf-icon.png" class="message-pdf-icon" alt="PDF document" />
+                                                <strong>Click to view document</strong>
+                                            </a>
+                                        </div>
+                                    </div>`;
+                            }
+                        }
+                    }
+
+
+                    messagesContainer.innerHTML += messageHTML;  // Append the message
+                });
+            }
+
+            // Function to send a message to the server and SignalR
+            function sendMessage(SenderID) {
+                let newMessage = document.getElementById('newMessage').value;
+                let fileInput = document.getElementById('fileInput');
+                let ReceiverID = localStorage.getItem('ReceiverID');
+                if (newMessage.trim() !== "") {
+                    // Send the message to the server and via SignalR
+
+                    const formData = {
+                        SenderId: SenderID,
+                        ReceiverId: ReceiverID,
+                        MessageText: newMessage,
+                        File: fileInput.files.length > 0 ? fileInput.files[0] : null
+                    };
+
+                    connection.invoke("SendMessage", JSON.stringify(formData)).then(function (responseMessage) {
+                        displayMessage(responseMessage)
+                    }).catch(function (err) {
+                        console.error(err);
+                    });
+                    //fetch('/MessageChat/SendMessage', {  // Adjust URL if necessary
+                    //    method: 'POST',
+                    //    headers: {
+                    //        'Content-Type': 'application/json',
+                    //    },
+                    //    body: JSON.stringify(formData)
+                    //})
+                    //    .then(response => response.json())
+                    //    .then(response => {
+                    //        if (response) {
+                    //            displayMessage(response);  // Display the new message in the chat window
+                    //            document.getElementById('newMessage').value = '';
+                    //        } else {
+                    //            console.error('Error sending message');
+                    //        }
+                    //    })
+                    //    .catch(error => console.error('Error:', error));
+                }
+            }
+        </script>
+    }
+
+
